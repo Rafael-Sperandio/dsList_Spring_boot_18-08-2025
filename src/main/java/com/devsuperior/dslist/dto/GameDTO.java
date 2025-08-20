@@ -1,6 +1,7 @@
 package com.devsuperior.dslist.dto;
 
 import com.devsuperior.dslist.entities.Game;
+import jakarta.persistence.Column;
 import org.springframework.beans.BeanUtils;
 
 public class GameDTO {
@@ -12,6 +13,9 @@ public class GameDTO {
     private Double score;
     private String imgUrl;
 
+    private String shortDescription;
+
+    private String longDescription;
     public GameDTO(){}
 
     public GameDTO(Game entity){
@@ -72,5 +76,21 @@ public class GameDTO {
 
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
+    }
+
+    public String getShortDescription() {
+        return shortDescription;
+    }
+
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
+    }
+
+    public String getLongDescription() {
+        return longDescription;
+    }
+
+    public void setLongDescription(String longDescription) {
+        this.longDescription = longDescription;
     }
 }
